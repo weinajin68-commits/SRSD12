@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRSD Tutor Chat</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <div class="app-shell">
+        <aside class="sidebar">
+          <div>
+            <h1 class="brand-title">SRSD Tutor</h1>
+            <p class="brand-subtitle">
+              Students learn continuation writing one step at a time.
+            </p>
+          </div>
+
+          <div>
+            <button class="primary-btn" id="new-chat-btn" type="button">New chat</button>
+          </div>
+
+          <div class="conversation-list" id="conversation-list"></div>
+
+          <div class="sidebar-footer">
+            <div class="user-chip">
+              <span>Student</span>
+              <strong id="username-chip"></strong>
+            </div>
+            <button class="ghost-btn" id="logout-btn" type="button">Logout</button>
+          </div>
+        </aside>
+
+        <main class="main-panel">
+          <header class="panel-header">
+            <h2 class="panel-title" id="conversation-title">New tutoring chat</h2>
+            <p class="panel-subtitle">
+              Paste the original reading text first, then chat with the tutor.
+              All conversations and messages are saved locally.
+            </p>
+            <p class="hint">Teaching style: the tutor should guide one small step at a time, mainly in simple English, and avoid writing the whole essay for the student.</p>
+            <p class="hint">Privacy note: students should not share phone numbers, home addresses, or other private personal information.</p>
+          </header>
+
+          <section class="original-box">
+            <label>
+              Original Reading Passage
+              <textarea
+                id="original-text"
+                placeholder="Paste the reading passage, the paragraph starters, and any instructions here."
+              ></textarea>
+            </label>
+            <div class="original-actions">
+              <span class="hint">This text will be attached as context for the tutoring conversation.</span>
+              <button class="secondary-btn" id="save-original-btn" type="button">Save passage</button>
+            </div>
+          </section>
+
+          <section class="messages" id="messages"></section>
+
+          <section class="composer">
+            <label>
+              Your Message
+              <textarea
+                id="message-input"
+                placeholder="Ask the tutor to guide you step by step. Example: Please ask me one small question in simple English."
+              ></textarea>
+            </label>
+            <div class="composer-actions">
+              <span class="status-line small" id="status-line">Ready.</span>
+              <button class="primary-btn" id="send-btn" type="button">Send</button>
+            </div>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="/app.js"></script>
+  </body>
+  </html>

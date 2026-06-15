@@ -1,0 +1,9 @@
+{
+  "name": "srsd-tutor-web",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Minimal SRSD continuation writing tutor with login, persistent chat history, and OpenAI integration.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}

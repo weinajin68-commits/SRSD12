@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRSD Writing Tutor</title>
+    <style>
+      :root {
+        --bg: #f5efe5;
+        --panel: rgba(255, 250, 242, 0.92);
+        --line: #dbc9aa;
+        --text: #2f2618;
+        --muted: #6f624c;
+        --accent: #b85a2c;
+        --accent-dark: #8f441f;
+        --shadow: 0 24px 60px rgba(75, 50, 23, 0.12);
+        --radius: 24px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Avenir Next", "PingFang SC", "Helvetica Neue", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at top left, rgba(184, 90, 44, 0.18), transparent 28%),
+          linear-gradient(180deg, #f8f2e9 0%, #f0e4cf 100%);
+      }
+
+      .shell {
+        max-width: 1180px;
+        margin: 0 auto;
+        padding: 28px 20px 40px;
+      }
+
+      .hero {
+        min-height: 100vh;
+        display: grid;
+        grid-template-columns: 1.15fr 0.85fr;
+        gap: 24px;
+        align-items: center;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(184, 90, 44, 0.12);
+        color: var(--accent-dark);
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1 {
+        margin: 18px 0;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: clamp(44px, 7vw, 78px);
+        line-height: 0.96;
+      }
+
+      .lead {
+        max-width: 660px;
+        color: #463a28;
+        font-size: 20px;
+        line-height: 1.8;
+      }
+
+      .copy p {
+        max-width: 640px;
+        color: var(--muted);
+        line-height: 1.9;
+      }
+
+      .actions {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        margin-top: 24px;
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 150px;
+        padding: 14px 18px;
+        border-radius: 16px;
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      .btn-primary {
+        color: #fff8f1;
+        background: linear-gradient(180deg, var(--accent), var(--accent-dark));
+      }
+
+      .btn-secondary {
+        color: var(--text);
+        background: rgba(255, 250, 242, 0.92);
+        border: 1px solid var(--line);
+      }
+
+      .panel,
+      .card {
+        background: var(--panel);
+        border: 1px solid rgba(111, 98, 76, 0.16);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+      }
+
+      .panel {
+        padding: 22px;
+      }
+
+      .panel h2,
+      .card h3 {
+        margin: 0 0 12px;
+        font-family: Georgia, "Times New Roman", serif;
+      }
+
+      .field {
+        margin-bottom: 14px;
+      }
+
+      .field label {
+        display: block;
+        margin-bottom: 7px;
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      .field input,
+      .field select,
+      .field textarea {
+        width: 100%;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        padding: 12px 14px;
+        font: inherit;
+        background: rgba(255, 252, 247, 0.95);
+      }
+
+      .hint {
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.7;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+        margin-top: 18px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      .card p {
+        margin: 0;
+        color: var(--muted);
+        line-height: 1.8;
+      }
+
+      @media (max-width: 920px) {
+        .hero,
+        .grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero {
+          min-height: auto;
+          padding: 24px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="shell">
+      <section class="hero">
+        <div class="copy">
+          <span class="eyebrow">Official Site</span>
+          <h1>SRSD Writing Tutor</h1>
+          <p class="lead">
+            A continuation-writing website that guides students one small step
+            at a time.
+          </p>
+          <p>
+            This site follows the SRSD teaching structure: key information
+            extraction, story mountain planning, sentence-by-sentence writing,
+            and final revision. Students enter their name, student ID, and
+            article type A or B before starting a tutoring session.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#student-form">Student Login</a>
+            <a class="btn btn-secondary" href="#features">How It Works</a>
+          </div>
+        </div>
+
+        <div class="panel" id="student-form">
+          <h2>Student Entry Demo</h2>
+          <div class="field">
+            <label for="student-name">Full Name</label>
+            <input id="student-name" type="text" placeholder="Enter your full name" />
+          </div>
+          <div class="field">
+            <label for="student-id">Student ID</label>
+            <input id="student-id" type="text" placeholder="Enter your student ID" />
+          </div>
+          <div class="field">
+            <label for="article-type">Article Type</label>
+            <select id="article-type">
+              <option value="A">Article A</option>
+              <option value="B">Article B</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="original-text">Original Passage</label>
+            <textarea
+              id="original-text"
+              rows="6"
+              placeholder="Paste the reading passage here"
+            ></textarea>
+          </div>
+          <a class="btn btn-primary" href="#">Start Tutoring</a>
+          <p class="hint">
+            This is a static HTML preview. To make login and chat work, connect
+            it to your backend service.
+          </p>
+        </div>
+      </section>
+
+      <section class="grid" id="features">
+        <article class="card">
+          <h3>Stage 1: Extract Key Information</h3>
+          <p>
+            Students identify characters, setting, conflict, emotions, plot
+            clues, and theme before writing.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Stage 2: Plan the Story Mountain</h3>
+          <p>
+            Students map Paragraph 1 and Paragraph 2 in a logical continuation
+            path.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Stage 3: Write Sentence by Sentence</h3>
+          <p>
+            The tutor gives short prompts, frames, and vocabulary instead of a
+            full model essay.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Stage 4: Revise the Draft</h3>
+          <p>
+            Students improve plot logic, language accuracy, character
+            consistency, and theme.
+          </p>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

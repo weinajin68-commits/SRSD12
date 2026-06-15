@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: srsd-tutor-web
+    runtime: node
+    plan: starter
+    region: singapore
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: HOST
+        value: 0.0.0.0
+      - key: PORT
+        value: "10000"
+      - key: COOKIE_SECURE
+        value: "true"
+      - key: DATA_DIR
+        value: /var/data
+      - key: OPENAI_MODEL
+        value: gpt-5.5
+      - key: SESSION_SECRET
+        generateValue: true
+      - key: OPENAI_API_KEY
+        sync: false
+    disk:
+      name: app-data
+      mountPath: /var/data
+      sizeGB: 5

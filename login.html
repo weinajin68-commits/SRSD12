@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SRSD Writing Tutor Login</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="auth-shell">
+      <div class="auth-card">
+        <section class="auth-brand">
+          <h1>SRSD Writing Tutor</h1>
+          <p>
+            Student access portal for step-by-step continuation writing
+            practice.
+          </p>
+          <p>
+            Students must register with their real name and student ID, then
+            choose article type A or B before starting a tutoring session.
+          </p>
+          <div class="auth-badges">
+            <span class="auth-badge">Student identity required</span>
+            <span class="auth-badge">Article type A/B tracking</span>
+            <span class="auth-badge">Persistent tutoring records</span>
+          </div>
+        </section>
+
+        <section class="auth-form-wrap">
+          <div class="tabs">
+            <button class="tab-btn active" id="show-login" type="button">Login</button>
+            <button class="tab-btn" id="show-register" type="button">Register</button>
+          </div>
+
+          <div id="auth-error" class="error-box hidden"></div>
+
+          <form id="login-form" class="auth-form">
+            <label>
+              Username
+              <input type="text" name="username" required minlength="3" maxlength="32" />
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" required minlength="6" maxlength="128" />
+            </label>
+            <button class="primary-btn" type="submit">Login</button>
+          </form>
+
+          <form id="register-form" class="auth-form hidden">
+            <label>
+              Full Name
+              <input type="text" name="fullName" required minlength="2" maxlength="40" />
+            </label>
+            <label>
+              Student ID
+              <input type="text" name="studentId" required minlength="2" maxlength="40" />
+            </label>
+            <label>
+              Username
+              <input type="text" name="username" required minlength="3" maxlength="32" />
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" required minlength="6" maxlength="128" />
+            </label>
+            <button class="primary-btn" type="submit">Create account</button>
+          </form>
+
+          <p class="auth-note">
+            Students should use their own real name and student ID so tutoring
+            records can be matched correctly.
+          </p>
+        </section>
+      </div>
+    </div>
+
+    <script src="/auth.js"></script>
+  </body>
+  </html>
